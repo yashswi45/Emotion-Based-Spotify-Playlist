@@ -1,0 +1,10 @@
+Flask
+Flask-Bcrypt
+Flask-SQLAlchemy
+python-dotenv
+spotipy
+TextBlob
+SpeechRecognition
+opencv-python
+fer
+gunicorn

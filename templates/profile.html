@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Profile</title>
+</head>
+<body>
+    <h1>Welcome, {{ user['display_name'] }}</h1>
+    <h2>Your Spotify Profile</h2>
+    <p><strong>Email:</strong> {{ user['email'] }}</p>
+    <p><strong>Country:</strong> {{ user['country'] }}</p>
+
+    <!-- Button to generate emotion-based playlist -->
+    <a href="{{ url_for('generate_playlist') }}">
+        <button>Generate Emotion-Based Playlist</button>
+    </a>
+</body>
+</html>
