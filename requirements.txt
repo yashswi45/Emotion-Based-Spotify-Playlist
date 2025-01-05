@@ -9,3 +9,4 @@ opencv-python
 fer
 gunicorn
 moviepy
+python-dotenv
