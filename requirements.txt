@@ -8,3 +8,4 @@ SpeechRecognition
 opencv-python
 fer
 gunicorn
+moviepy
