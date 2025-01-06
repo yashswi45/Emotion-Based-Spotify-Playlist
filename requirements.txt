@@ -1,15 +1,7 @@
-Flask
-Flask-Bcrypt
-Flask-SQLAlchemy
-python-dotenv
-spotipy
 TextBlob
 SpeechRecognition
 opencv-python
 fer
-gunicorn
-moviepy
-
 Flask==2.0.1
 Flask-Bcrypt==1.0.1
 Flask-SQLAlchemy==3.0.2
