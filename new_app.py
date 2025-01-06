@@ -11,6 +11,7 @@ from textblob import TextBlob
 import speech_recognition as sr
 from fer import FER
 
+
 # Load environment variables
 load_dotenv()
 
@@ -19,6 +20,7 @@ app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY")
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 
 # Initialize extensions
 bcrypt = Bcrypt(app)
@@ -35,6 +37,8 @@ sp_oauth = SpotifyOAuth(
     redirect_uri=SPOTIPY_REDIRECT_URI,
     scope="user-library-read playlist-modify-private playlist-modify-public"
 )
+
+
 
 
 # User model
