@@ -1,193 +1,795 @@
+
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;LATEST WORKING :&ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<html lang="en">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<head>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <meta charset="UTF-8">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <meta name="viewport" content="width=device-width, initial-scale=1.0">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <title>MoodSync Playlist</title>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <link rel="preconnect" href="https://fonts.googleapis.com">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <style>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        body {&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            background-color: #110B11;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            color: #F2F4CB;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            font-family: 'Dosis', sans-serif;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        }&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        .navbar {&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            background-color: #8CADA7;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        }&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        .navbar-brand {&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            font-size: 1.5rem;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            font-weight: 600;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            color: #F2F4CB !important;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        }&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        .nav-link { color: #F2F4CB !important; }&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        .container {&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            background: #A5D0A8;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            padding: 30px;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            border-radius: 15px;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            margin-top: 50px;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        }&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        h1 { color: #110B11; font-weight: 700; }&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        .btn-primary { background-color: #8CADA7; border: none; }&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        .btn-primary:hover { background-color: #6B9389; transform: scale(1.1); }&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        .dashboard, .about-section {&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            background-color: #F2F4CB;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            padding: 40px;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            border-radius: 10px;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            margin-top: 40px;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            color: #110B11;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        }&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        .image-section img {&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            width: 100%; max-width: 300px; border-radius: 10px; display: block; margin: auto;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        }&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        .loading { display: none; font-weight: bold; color: #110B11; }&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    </style>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</head>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<body>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <nav class="navbar navbar-expand-lg">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        <div class="container">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            <a class="navbar-brand" href="#">MoodSync Playlist</a>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    </nav>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <div class="container text-center">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        <h1>🎵 MoodSync Playlist 🎵</h1>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        {% if session.get('user_id') %}&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            {% if not session.get('spotify_connected') %}&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                <a href="{{ url_for('spotify_auth') }}" class="btn btn-primary mt-2" onclick="showPopup('Connecting to Spotify...')">Connect Spotify</a>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            {% else %}&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                <p class="text-success mt-2">🎵 Spotify Connected</p>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            {% endif %}&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        {% else %}&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            <a href="{{ url_for('login') }}" class="btn btn-primary">Login</a>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        {% endif %}&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <div class="container mt-4" id="emotion">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        {% if session.get('user_id') %}&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        <form action="{{ url_for('detect_emotion') }}" method="POST" onsubmit="showLoading()">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            <div class="mb-3">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                <label class="form-label">Select Emotion Type</label>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                <select class="form-select" id="emotion_type" name="emotion_type" required>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                    <option value="facial">Facial Expression</option>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                    <option value="text">Text Sentiment</option>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                    <option value="audio">Audio Sentiment</option>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                </select>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            <div id="text-input" class="mb-3" style="display: none;">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                <label class="form-label">Enter Text</label>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                <textarea class="form-control" name="text" rows="4"></textarea>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            <div id="audio-input" class="mb-3" style="display: none;">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;                <button type="button" class="btn btn-primary" onclick="startRecording()">Start Recording</button>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            <p id="loading" class="loading">Detecting emotion...</p>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            <button type="submit" class="btn btn-success">Detect Emotion</button>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        </form>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        {% else %}&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        <p><strong>Please log in to detect emotions and generate playlists.</strong></p>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        {% endif %}&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <div class="container dashboard" id="dashboard">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        <h2>📊 Dashboard</h2>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        <p>🎵 Dashboard Overview&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</br></br></br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;🌟 Your Top Artists</br></br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;🎤 Kanye West – Pop & storytelling magic</br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;🎸 Pink Floyd – Acoustic vibes & heartfelt lyrics</br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;🎧 Radiohead – Hip-hop & R&B fusion</br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;🥁 The Strokes – Rock anthems & powerful beats</br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;🎹 The Weeknd – R&B & futuristic pop</br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</br></br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;📊 Trending Songs</br></br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;🎶 Flowers – Miley Cyrus</br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;🎶 Kill Bill – SZA</br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;🎶 Calm Down – Rema & Selena Gomez</br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;🎶 Ode To The Mets– Strokes</br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;🎶 Creepin’ – The Weeknd</br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</br></br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;🎼 Mood Playlists</br></br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;😃 Happy Vibes – Upbeat pop & feel-good anthems</br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;😔 Chill & Relax – Lo-fi beats & soft acoustics</br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;🤩 Party Mode – EDM & high-energy dance music</br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;💔 Heartbreak & Sad – Emotional ballads & indie tracks</br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;🚀 Focus & Study – Instrumental & deep house</p>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <div class="container about-section" id="about">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        <h2>About</h2>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        <p>MoodSync is an AI-powered music recommendation app that creates personalized playlists based on your emotions. By analyzing your facial expressions, text sentiment, or voice tone, MoodSync detects your current mood and seamlessly integrates with Spotify to curate a playlist that matches your feelings. Whether you're feeling happy, sad, relaxed, or energetic, the right music is just a click away. Our goal is to enhance your listening experience by combining emotion recognition with intelligent music selection, ensuring that every song resonates with your mood. MoodSync also provides insights into your listening habits, top artists, and trending songs, helping you discover new favorites. Let music adapt to your emotions and make every moment special! 🎵✨&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+
+
+
+
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;.</p>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <script>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        document.getElementById("emotion_type").addEventListener("change", function() {&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            document.getElementById("text-input").style.display = this.value === "text" ? "block" : "none";&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            document.getElementById("audio-input").style.display = this.value === "audio" ? "block" : "none";&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        });&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        function showLoading() {&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            document.getElementById("loading").style.display = "block";&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        }&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        function showPopup(message) {&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;            alert(message);&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        }&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    </script>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</body>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</html>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+
+
+
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html lang="en">&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta charset="UTF-8">&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta name="viewport" content="width=device-width, initial-scale=1.0">&ndash;&gt;-->
+<!--&lt;!&ndash;    <title>MoodSync Playlist</title>&ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="preconnect" href="https://fonts.googleapis.com">&ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>&ndash;&gt;-->
+<!--&lt;!&ndash;    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">&ndash;&gt;-->
+<!--&lt;!&ndash;    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />&ndash;&gt;-->
+<!--&lt;!&ndash;    <style>&ndash;&gt;-->
+<!--&lt;!&ndash;        body {&ndash;&gt;-->
+<!--&lt;!&ndash;            background-color: #110B11;&ndash;&gt;-->
+<!--&lt;!&ndash;            color: #F2F4CB;&ndash;&gt;-->
+<!--&lt;!&ndash;            font-family: 'Dosis', sans-serif;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        .navbar {&ndash;&gt;-->
+<!--&lt;!&ndash;            background-color: #8CADA7;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        .navbar-brand {&ndash;&gt;-->
+<!--&lt;!&ndash;            font-size: 1.5rem;&ndash;&gt;-->
+<!--&lt;!&ndash;            font-weight: 600;&ndash;&gt;-->
+<!--&lt;!&ndash;            color: #F2F4CB !important;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        .nav-link { color: #F2F4CB !important; }&ndash;&gt;-->
+<!--&lt;!&ndash;        .container {&ndash;&gt;-->
+<!--&lt;!&ndash;            background: #A5D0A8;&ndash;&gt;-->
+<!--&lt;!&ndash;            padding: 30px;&ndash;&gt;-->
+<!--&lt;!&ndash;            border-radius: 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);&ndash;&gt;-->
+<!--&lt;!&ndash;            margin-top: 50px;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        h1 { color: #110B11; font-weight: 700; }&ndash;&gt;-->
+<!--&lt;!&ndash;        .btn-primary { background-color: #8CADA7; border: none; }&ndash;&gt;-->
+<!--&lt;!&ndash;        .btn-primary:hover { background-color: #6B9389; transform: scale(1.1); }&ndash;&gt;-->
+<!--&lt;!&ndash;        .dashboard, .about-section {&ndash;&gt;-->
+<!--&lt;!&ndash;            background-color: #F2F4CB;&ndash;&gt;-->
+<!--&lt;!&ndash;            padding: 40px;&ndash;&gt;-->
+<!--&lt;!&ndash;            border-radius: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;            margin-top: 40px;&ndash;&gt;-->
+<!--&lt;!&ndash;            color: #110B11;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        .image-section img {&ndash;&gt;-->
+<!--&lt;!&ndash;            width: 100%; max-width: 300px; border-radius: 10px; display: block; margin: auto;&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;        .loading { display: none; font-weight: bold; color: #110B11; }&ndash;&gt;-->
+<!--&lt;!&ndash;        .emotion-result { margin-top: 20px; font-size: 1.2rem; }&ndash;&gt;-->
+<!--&lt;!&ndash;        .playlist-link { color: #110B11; text-decoration: underline; }&ndash;&gt;-->
+<!--&lt;!&ndash;        .playlist-info { margin-top: 20px; }&ndash;&gt;-->
+<!--&lt;!&ndash;        .playlist-loading { display: none; font-weight: bold; color: #110B11; }&ndash;&gt;-->
+<!--&lt;!&ndash;    </style>&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+<!--&lt;!&ndash;    <nav class="navbar navbar-expand-lg">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="navbar-brand" href="#">MoodSync Playlist</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </nav>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <div class="container text-center">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h1>🎵 MoodSync Playlist 🎵</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;        {% if session.get('user_id') %}&ndash;&gt;-->
+<!--&lt;!&ndash;            <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>&ndash;&gt;-->
+<!--&lt;!&ndash;            {% if not session.get('spotify_connected') %}&ndash;&gt;-->
+<!--&lt;!&ndash;                <a href="{{ url_for('spotify_auth') }}" class="btn btn-primary mt-2" onclick="showPopup('Connecting to Spotify...')">Connect Spotify</a>&ndash;&gt;-->
+<!--&lt;!&ndash;            {% else %}&ndash;&gt;-->
+<!--&lt;!&ndash;                <p class="text-success mt-2">🎵 Spotify Connected</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            {% endif %}&ndash;&gt;-->
+<!--&lt;!&ndash;        {% else %}&ndash;&gt;-->
+<!--&lt;!&ndash;            <a href="{{ url_for('login') }}" class="btn btn-primary">Login</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        {% endif %}&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <div class="container mt-4" id="emotion">&ndash;&gt;-->
+<!--&lt;!&ndash;        {% if session.get('user_id') %}&ndash;&gt;-->
+<!--&lt;!&ndash;        <form action="{{ url_for('detect_emotion') }}" method="POST" onsubmit="showLoading()">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="mb-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                <label class="form-label">Select Emotion Type</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                <select class="form-select" id="emotion_type" name="emotion_type" required>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <option value="facial">Facial Expression</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <option value="text">Text Sentiment</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <option value="audio">Audio Sentiment</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                </select>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div id="text-input" class="mb-3" style="display: none;">&ndash;&gt;-->
+<!--&lt;!&ndash;                <label class="form-label">Enter Text</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                <textarea class="form-control" name="text" rows="4"></textarea>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div id="audio-input" class="mb-3" style="display: none;">&ndash;&gt;-->
+<!--&lt;!&ndash;                <button type="button" class="btn btn-primary" onclick="startRecording()">Start Recording</button>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p id="loading" class="loading">Detecting emotion...</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            <button type="submit" class="btn btn-success">Detect Emotion</button>&ndash;&gt;-->
+<!--&lt;!&ndash;        </form>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Display Detected Emotion &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        {% if session.get('detected_emotion') %}&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="emotion-result mt-3">&ndash;&gt;-->
+<!--&lt;!&ndash;            <p><strong>Detected Emotion:</strong> {{ session['detected_emotion'] }}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            <form id="generate-playlist-form" action="{{ url_for('generate_playlist') }}" method="POST" onsubmit="showPlaylistLoading(event)">&ndash;&gt;-->
+<!--&lt;!&ndash;                <button type="submit" class="btn btn-primary">Generate Playlist</button>&ndash;&gt;-->
+<!--&lt;!&ndash;            </form>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        {% endif %}&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Display Playlist Loading Message &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <p id="playlist-loading" class="playlist-loading">Generating playlist...</p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Display Playlist Info &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        {% if session.get('playlist_url') and session.get('playlist_name') %}&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="playlist-info mt-3">&ndash;&gt;-->
+<!--&lt;!&ndash;            <p><strong>Playlist Name:</strong> {{ session['playlist_name'] }}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p><strong>Playlist Link:</strong> <a href="{{ session['playlist_url'] }}" class="playlist-link" target="_blank">Listen on Spotify</a></p>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        {% endif %}&ndash;&gt;-->
+
+<!--&lt;!&ndash;        {% else %}&ndash;&gt;-->
+<!--&lt;!&ndash;        <p><strong>Please log in to detect emotions and generate playlists.</strong></p>&ndash;&gt;-->
+<!--&lt;!&ndash;        {% endif %}&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <div class="container dashboard" id="dashboard">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h2>📊 Dashboard</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>🎵 Dashboard Overview&ndash;&gt;-->
+<!--&lt;!&ndash;</br></br></br>&ndash;&gt;-->
+<!--&lt;!&ndash;🌟 Your Top Artists</br></br>&ndash;&gt;-->
+<!--&lt;!&ndash;🎤 Kanye West – Pop & storytelling magic</br>&ndash;&gt;-->
+<!--&lt;!&ndash;🎸 Pink Floyd – Acoustic vibes & heartfelt lyrics</br>&ndash;&gt;-->
+<!--&lt;!&ndash;🎧 Radiohead – Hip-hop & R&B fusion</br>&ndash;&gt;-->
+<!--&lt;!&ndash;🥁 The Strokes – Rock anthems & powerful beats</br>&ndash;&gt;-->
+<!--&lt;!&ndash;🎹 The Weeknd – R&B & futuristic pop</br>&ndash;&gt;-->
+<!--&lt;!&ndash;</br></br>&ndash;&gt;-->
+<!--&lt;!&ndash;📊 Trending Songs</br></br>&ndash;&gt;-->
+<!--&lt;!&ndash;🎶 Flowers – Miley Cyrus</br>&ndash;&gt;-->
+<!--&lt;!&ndash;🎶 Kill Bill – SZA</br>&ndash;&gt;-->
+<!--&lt;!&ndash;🎶 Calm Down – Rema & Selena Gomez</br>&ndash;&gt;-->
+<!--&lt;!&ndash;🎶 Ode To The Mets– Strokes</br>&ndash;&gt;-->
+<!--&lt;!&ndash;🎶 Creepin’ – The Weeknd</br>&ndash;&gt;-->
+<!--&lt;!&ndash;</br></br>&ndash;&gt;-->
+<!--&lt;!&ndash;🎼 Mood Playlists</br></br>&ndash;&gt;-->
+<!--&lt;!&ndash;😃 Happy Vibes – Upbeat pop & feel-good anthems</br>&ndash;&gt;-->
+<!--&lt;!&ndash;😔 Chill & Relax – Lo-fi beats & soft acoustics</br>&ndash;&gt;-->
+<!--&lt;!&ndash;🤩 Party Mode – EDM & high-energy dance music</br>&ndash;&gt;-->
+<!--&lt;!&ndash;💔 Heartbreak & Sad – Emotional ballads & indie tracks</br>&ndash;&gt;-->
+<!--&lt;!&ndash;🚀 Focus & Study – Instrumental & deep house</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <div class="container about-section" id="about">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h2>About</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>MoodSync is an AI-powered music recommendation app that creates personalized playlists based on your emotions. By analyzing your facial expressions, text sentiment, or voice tone, MoodSync detects your current mood and seamlessly integrates with Spotify to curate a playlist that matches your feelings. Whether you're feeling happy, sad, relaxed, or energetic, the right music is just a click away. Our goal is to enhance your listening experience by combining emotion recognition with intelligent music selection, ensuring that every song resonates with your mood. MoodSync also provides insights into your listening habits, top artists, and trending songs, helping you discover new favorites. Let music adapt to your emotions and make every moment special! 🎵✨</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <script>&ndash;&gt;-->
+<!--&lt;!&ndash;        // Show/hide text and audio inputs based on emotion type&ndash;&gt;-->
+<!--&lt;!&ndash;        document.getElementById("emotion_type").addEventListener("change", function() {&ndash;&gt;-->
+<!--&lt;!&ndash;            document.getElementById("text-input").style.display = this.value === "text" ? "block" : "none";&ndash;&gt;-->
+<!--&lt;!&ndash;            document.getElementById("audio-input").style.display = this.value === "audio" ? "block" : "none";&ndash;&gt;-->
+<!--&lt;!&ndash;        });&ndash;&gt;-->
+
+<!--&lt;!&ndash;        // Show loading message while detecting emotion&ndash;&gt;-->
+<!--&lt;!&ndash;        function showLoading() {&ndash;&gt;-->
+<!--&lt;!&ndash;            document.getElementById("loading").style.display = "block";&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+
+<!--&lt;!&ndash;        // Show loading message while generating playlist&ndash;&gt;-->
+<!--&lt;!&ndash;        function showPlaylistLoading(event) {&ndash;&gt;-->
+<!--&lt;!&ndash;            event.preventDefault(); // Prevent form submission&ndash;&gt;-->
+<!--&lt;!&ndash;            document.getElementById("playlist-loading").style.display = "block"; // Show loading message&ndash;&gt;-->
+
+<!--&lt;!&ndash;            // Submit the form after showing the loading message&ndash;&gt;-->
+<!--&lt;!&ndash;            fetch(event.target.action, {&ndash;&gt;-->
+<!--&lt;!&ndash;                method: 'POST',&ndash;&gt;-->
+<!--&lt;!&ndash;                headers: {&ndash;&gt;-->
+<!--&lt;!&ndash;                    'Content-Type': 'application/x-www-form-urlencoded',&ndash;&gt;-->
+<!--&lt;!&ndash;                },&ndash;&gt;-->
+<!--&lt;!&ndash;                body: new URLSearchParams(new FormData(event.target)),&ndash;&gt;-->
+<!--&lt;!&ndash;            })&ndash;&gt;-->
+<!--&lt;!&ndash;            .then(response => {&ndash;&gt;-->
+<!--&lt;!&ndash;                if (response.redirected) {&ndash;&gt;-->
+<!--&lt;!&ndash;                    window.location.href = response.url; // Redirect to the new page&ndash;&gt;-->
+<!--&lt;!&ndash;                }&ndash;&gt;-->
+<!--&lt;!&ndash;            })&ndash;&gt;-->
+<!--&lt;!&ndash;            .catch(error => {&ndash;&gt;-->
+<!--&lt;!&ndash;                console.error('Error:', error);&ndash;&gt;-->
+<!--&lt;!&ndash;                document.getElementById("playlist-loading").style.display = "none"; // Hide loading message on error&ndash;&gt;-->
+<!--&lt;!&ndash;            });&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+
+<!--&lt;!&ndash;        // Show popup message&ndash;&gt;-->
+<!--&lt;!&ndash;        function showPopup(message) {&ndash;&gt;-->
+<!--&lt;!&ndash;            alert(message);&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;    </script>&ndash;&gt;-->
+<!--&lt;!&ndash;    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>MoodSync Playlist</title>-->
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />-->
+<!--    <style>-->
+<!--        body {-->
+<!--            background-color: #110B11;-->
+<!--            color: #F2F4CB;-->
+<!--            font-family: 'Dosis', sans-serif;-->
+<!--        }-->
+<!--        .navbar {-->
+<!--            background-color: #8CADA7;-->
+<!--        }-->
+<!--        .navbar-brand {-->
+<!--            font-size: 1.5rem;-->
+<!--            font-weight: 600;-->
+<!--            color: #F2F4CB !important;-->
+<!--        }-->
+<!--        .nav-link { color: #F2F4CB !important; }-->
+<!--        .container {-->
+<!--            background: #A5D0A8;-->
+<!--            padding: 30px;-->
+<!--            border-radius: 15px;-->
+<!--            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);-->
+<!--            margin-top: 50px;-->
+<!--        }-->
+<!--        h1 { color: #110B11; font-weight: 700; }-->
+<!--        .btn-primary { background-color: #8CADA7; border: none; }-->
+<!--        .btn-primary:hover { background-color: #6B9389; transform: scale(1.1); }-->
+<!--        .dashboard, .about-section {-->
+<!--            background-color: #F2F4CB;-->
+<!--            padding: 40px;-->
+<!--            border-radius: 10px;-->
+<!--            margin-top: 40px;-->
+<!--            color: #110B11;-->
+<!--        }-->
+<!--        .image-section img {-->
+<!--            width: 100%; max-width: 300px; border-radius: 10px; display: block; margin: auto;-->
+<!--        }-->
+<!--        .loading { display: none; font-weight: bold; color: #110B11; }-->
+<!--        .emotion-result { margin-top: 20px; font-size: 1.2rem; }-->
+<!--        .playlist-link { color: #110B11; text-decoration: underline; }-->
+<!--        .playlist-info { margin-top: 20px; }-->
+<!--        .playlist-loading { display: none; font-weight: bold; color: #110B11; }-->
+<!--        .alert-success { background-color: #d4edda; color: #155724; border-color: #c3e6cb; }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <nav class="navbar navbar-expand-lg">-->
+<!--        <div class="container">-->
+<!--            <a class="navbar-brand" href="#">MoodSync Playlist</a>-->
+<!--        </div>-->
+<!--    </nav>-->
+
+<!--    <div class="container text-center">-->
+<!--        <h1>🎵 MoodSync Playlist 🎵</h1>-->
+<!--        {% if session.get('user_id') %}-->
+<!--            <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>-->
+<!--            {% if not session.get('spotify_connected') %}-->
+<!--                <a href="{{ url_for('spotify_auth') }}" class="btn btn-primary mt-2" onclick="showPopup('Connecting to Spotify...')">Connect Spotify</a>-->
+<!--            {% else %}-->
+<!--                <p class="text-success mt-2">🎵 Spotify Connected</p>-->
+<!--            {% endif %}-->
+<!--        {% else %}-->
+<!--            <a href="{{ url_for('login') }}" class="btn btn-primary">Login</a>-->
+<!--        {% endif %}-->
+<!--    </div>-->
+
+<!--    <div class="container mt-4" id="emotion">-->
+<!--        &lt;!&ndash; Display flashed messages &ndash;&gt;-->
+<!--        {% with messages = get_flashed_messages(with_categories=true) %}-->
+<!--            {% if messages %}-->
+<!--                {% for category, message in messages %}-->
+<!--                    <div class="alert alert-{{ category }}">-->
+<!--                        {{ message | safe }}-->
+<!--                    </div>-->
+<!--                {% endfor %}-->
+<!--            {% endif %}-->
+<!--        {% endwith %}-->
+
+<!--        {% if session.get('user_id') %}-->
+<!--        <form action="{{ url_for('detect_emotion') }}" method="POST" onsubmit="showLoading()">-->
+<!--            <div class="mb-3">-->
+<!--                <label class="form-label">Select Emotion Type</label>-->
+<!--                <select class="form-select" id="emotion_type" name="emotion_type" required>-->
+<!--                    <option value="facial">Facial Expression</option>-->
+<!--                    <option value="text">Text Sentiment</option>-->
+<!--                    <option value="audio">Audio Sentiment</option>-->
+<!--                </select>-->
+<!--            </div>-->
+<!--            <div id="text-input" class="mb-3" style="display: none;">-->
+<!--                <label class="form-label">Enter Text</label>-->
+<!--                <textarea class="form-control" name="text" rows="4"></textarea>-->
+<!--            </div>-->
+<!--            <div id="audio-input" class="mb-3" style="display: none;">-->
+<!--                <button type="button" class="btn btn-primary" onclick="startRecording()">Start Recording</button>-->
+<!--            </div>-->
+<!--            <p id="loading" class="loading">Detecting emotion...</p>-->
+<!--            <button type="submit" class="btn btn-success">Detect Emotion</button>-->
+<!--        </form>-->
+
+<!--        &lt;!&ndash; Display Detected Emotion &ndash;&gt;-->
+<!--        {% if session.get('detected_emotion') %}-->
+<!--        <div class="emotion-result mt-3">-->
+<!--            <p><strong>Detected Emotion:</strong> {{ session['detected_emotion'] }}</p>-->
+<!--            <form id="generate-playlist-form" action="{{ url_for('generate_playlist') }}" method="POST" onsubmit="showPlaylistLoading(event)">-->
+<!--                <button type="submit" class="btn btn-primary">Generate Playlist</button>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--        {% endif %}-->
+
+<!--        &lt;!&ndash; Display Playlist Loading Message &ndash;&gt;-->
+<!--        <p id="playlist-loading" class="playlist-loading">Generating playlist...</p>-->
+
+<!--        &lt;!&ndash; Display Playlist Info &ndash;&gt;-->
+<!--        {% if session.get('playlist_url') and session.get('playlist_name') %}-->
+<!--        <div class="playlist-info mt-3">-->
+<!--            <p><strong>Playlist Name:</strong> {{ session['playlist_name'] }}</p>-->
+<!--            <p><strong>Playlist Link:</strong> <a href="{{ session['playlist_url'] }}" class="playlist-link" target="_blank">Listen on Spotify</a></p>-->
+<!--        </div>-->
+<!--        {% endif %}-->
+
+<!--        {% else %}-->
+<!--        <p><strong>Please log in to detect emotions and generate playlists.</strong></p>-->
+<!--        {% endif %}-->
+<!--    </div>-->
+
+<!--    <div class="container dashboard" id="dashboard">-->
+<!--        <h2>📊 Dashboard</h2>-->
+<!--        <p>🎵 Dashboard Overview-->
+<!--</br></br></br>-->
+<!--🌟 Your Top Artists</br></br>-->
+<!--🎤 Kanye West – Pop & storytelling magic</br>-->
+<!--🎸 Pink Floyd – Acoustic vibes & heartfelt lyrics</br>-->
+<!--🎧 Radiohead – Hip-hop & R&B fusion</br>-->
+<!--🥁 The Strokes – Rock anthems & powerful beats</br>-->
+<!--🎹 The Weeknd – R&B & futuristic pop</br>-->
+<!--</br></br>-->
+<!--📊 Trending Songs</br></br>-->
+<!--🎶 Flowers – Miley Cyrus</br>-->
+<!--🎶 Kill Bill – SZA</br>-->
+<!--🎶 Calm Down – Rema & Selena Gomez</br>-->
+<!--🎶 Ode To The Mets– Strokes</br>-->
+<!--🎶 Creepin’ – The Weeknd</br>-->
+<!--</br></br>-->
+<!--🎼 Mood Playlists</br></br>-->
+<!--😃 Happy Vibes – Upbeat pop & feel-good anthems</br>-->
+<!--😔 Chill & Relax – Lo-fi beats & soft acoustics</br>-->
+<!--🤩 Party Mode – EDM & high-energy dance music</br>-->
+<!--💔 Heartbreak & Sad – Emotional ballads & indie tracks</br>-->
+<!--🚀 Focus & Study – Instrumental & deep house</p>-->
+<!--    </div>-->
+
+<!--    <div class="container about-section" id="about">-->
+<!--        <h2>About</h2>-->
+<!--        <p>MoodSync is an AI-powered music recommendation app that creates personalized playlists based on your emotions. By analyzing your facial expressions, text sentiment, or voice tone, MoodSync detects your current mood and seamlessly integrates with Spotify to curate a playlist that matches your feelings. Whether you're feeling happy, sad, relaxed, or energetic, the right music is just a click away. Our goal is to enhance your listening experience by combining emotion recognition with intelligent music selection, ensuring that every song resonates with your mood. MoodSync also provides insights into your listening habits, top artists, and trending songs, helping you discover new favorites. Let music adapt to your emotions and make every moment special! 🎵✨</p>-->
+<!--    </div>-->
+
+<!--    <script>-->
+<!--        // Show/hide text and audio inputs based on emotion type-->
+<!--        document.getElementById("emotion_type").addEventListener("change", function() {-->
+<!--            document.getElementById("text-input").style.display = this.value === "text" ? "block" : "none";-->
+<!--            document.getElementById("audio-input").style.display = this.value === "audio" ? "block" : "none";-->
+<!--        });-->
+
+<!--        // Show loading message while detecting emotion-->
+<!--        function showLoading() {-->
+<!--            document.getElementById("loading").style.display = "block";-->
+<!--        }-->
+
+<!--        // Show loading message while generating playlist-->
+<!--        function showPlaylistLoading(event) {-->
+<!--            event.preventDefault(); // Prevent form submission-->
+<!--            document.getElementById("playlist-loading").style.display = "block"; // Show loading message-->
+
+<!--            // Submit the form after showing the loading message-->
+<!--            fetch(event.target.action, {-->
+<!--                method: 'POST',-->
+<!--                headers: {-->
+<!--                    'Content-Type': 'application/x-www-form-urlencoded',-->
+<!--                },-->
+<!--                body: new URLSearchParams(new FormData(event.target)),-->
+<!--            })-->
+<!--            .then(response => {-->
+<!--                if (response.redirected) {-->
+<!--                    window.location.href = response.url; // Redirect to the new page-->
+<!--                }-->
+<!--            })-->
+<!--            .catch(error => {-->
+<!--                console.error('Error:', error);-->
+<!--                document.getElementById("playlist-loading").style.display = "none"; // Hide loading message on error-->
+<!--            });-->
+<!--        }-->
+
+<!--        // Show popup message-->
+<!--        function showPopup(message) {-->
+<!--            alert(message);-->
+<!--        }-->
+<!--    </script>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emotion-Based Playlist Generator</title>
+    <title>MoodSync Playlist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
         body {
-            background-image: url('../static/images/jim&pam.jpg');
-            background-size: cover;
-            background-position: center;
-            font-family: 'Comic Sans MS', 'Arial', sans-serif;
-            color: white;
-            background-attachment: fixed;
-            filter: blur(0px); /* No blur */
+            background-color: #110B11;
+            color: #F2F4CB;
+            font-family: 'Dosis', sans-serif;
         }
-
-        /* Add a top margin to move everything down */
+        .navbar {
+            background-color: #8CADA7;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #F2F4CB !important;
+        }
+        .nav-link { color: #F2F4CB !important; }
         .container {
-            position: relative;
-            background: rgba(255, 255, 255, 0.1); /* Slightly transparent */
-            backdrop-filter: blur(10px); /* Frosted glass effect */
+            background: #A5D0A8;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            margin-top: 300px; /* Push the container down */
+            margin-top: 50px;
         }
-
-        h1 {
-            font-family: 'Baskerville', serif;
-            color: #ffe066;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-            font-size: 2.5rem;
-        }
-
-        .btn-primary, .btn-danger, .btn-success {
-            font-size: 1.2rem;
-            border: none;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover { background-color: #e8564c; transform: scale(1.1); }
-        .btn-danger:hover { background-color: #db3b80; transform: scale(1.1); }
-        .btn-success:hover { background-color: #55be78; transform: scale(1.1); }
-
-        .form-label {
-            color: #ffe066;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        select, textarea {
-            background-color: #fff8e1;
-            color: #333;
+        h1 { color: #110B11; font-weight: 700; }
+        .btn-primary { background-color: #8CADA7; border: none; }
+        .btn-primary:hover { background-color: #6B9389; transform: scale(1.1); }
+        .dashboard, .about-section {
+            background-color: #F2F4CB;
+            padding: 40px;
             border-radius: 10px;
-            border: 2px solid #ffe066;
-            font-size: 1rem;
-            padding: 10px;
+            margin-top: 40px;
+            color: #110B11;
         }
-
-        .image-section {
-            text-align: center;
-            margin: 20px 0;
-        }
-
         .image-section img {
-            border-radius: 50%;
-            border: 5px solid #ffe066;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: 100%; max-width: 300px; border-radius: 10px; display: block; margin: auto;
         }
+        .loading { display: none; font-weight: bold; color: #110B11; }
+        .emotion-result { margin-top: 20px; font-size: 1.2rem; }
+        .playlist-link { color: #110B11; text-decoration: underline; }
+        .playlist-info { margin-top: 20px; }
+        .playlist-loading { display: none; font-weight: bold; color: #110B11; }
+        .alert-success { background-color: #d4edda; color: #155724; border-color: #c3e6cb; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center my-5">🎵 Emotion-Based Playlist Generator 🎵</h1>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">MoodSync Playlist</a>
+        </div>
+    </nav>
 
-        <!-- Feedback Messages -->
-        {% with messages = get_flashed_messages() %}
+    <div class="container text-center">
+        <h1>🎵 MoodSync Playlist 🎵</h1>
+        {% if session.get('user_id') %}
+            <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+            {% if not session.get('spotify_connected') %}
+                <a href="{{ url_for('spotify_auth') }}" class="btn btn-primary mt-2" onclick="showPopup('Connecting to Spotify...')">Connect Spotify</a>
+            {% else %}
+                <p class="text-success mt-2">🎵 Spotify Connected</p>
+            {% endif %}
+        {% else %}
+            <a href="{{ url_for('login') }}" class="btn btn-primary">Login</a>
+        {% endif %}
+    </div>
+
+    <div class="container mt-4" id="emotion">
+        <!-- Display flashed messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
-                <div class="flashes">
-                    {% for message in messages %}
-                        <div class="alert alert-info text-center">{{ message }}</div>
-                    {% endfor %}
-                </div>
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message | safe }}
+                    </div>
+                {% endfor %}
             {% endif %}
         {% endwith %}
 
-<!--        &lt;!&ndash; Image Section &ndash;&gt;-->
-<!--        <div class="image-section">-->
-<!--            <img src="/static/images/download (1).jpeg" alt="Emotion Avatar" id="emotion-avatar">-->
-<!--            <p>How are you feeling today?</p>-->
-<!--        </div>-->
-
-<!--        &lt;!&ndash; Login/Logout Section &ndash;&gt;-->
-<!--        <div class="text-center mb-4">-->
-<!--            {% if session.get('user_id') %}-->
-<!--                <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>-->
-<!--            {% else %}-->
-<!--                <a href="{{ url_for('login') }}" class="btn btn-primary">Login</a>-->
-<!--            {% endif %}-->
-<!--        </div>-->
-
-        <!-- Login/Logout Section -->
-            <div class="text-center mb-4">
-                {% if session.get('user_id') %}
-                    <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
-                    <!-- Spotify Connect Button -->
-                    {% if not session.get('spotify_connected') %}
-                        <a href="{{ url_for('spotify_auth') }}" class="btn btn-primary mt-2">Connect Spotify</a>
-                    {% else %}
-                        <p class="text-success mt-2">🎵 Spotify Connected</p>
-                    {% endif %}
-                {% else %}
-                    <a href="{{ url_for('login') }}" class="btn btn-primary">Login</a>
-                {% endif %}
-            </div>
-
-
-        <!-- Emotion Detection Form -->
         {% if session.get('user_id') %}
-        <form action="{{ url_for('detect_emotion') }}" method="POST">
+        <form action="{{ url_for('detect_emotion') }}" method="POST" onsubmit="showLoading()">
             <div class="mb-3">
-                <label for="emotion_type" class="form-label">Select Emotion Type</label>
+                <label class="form-label">Select Emotion Type</label>
                 <select class="form-select" id="emotion_type" name="emotion_type" required>
                     <option value="facial">Facial Expression</option>
                     <option value="text">Text Sentiment</option>
                     <option value="audio">Audio Sentiment</option>
                 </select>
             </div>
-
-            <!-- Text Input Section -->
             <div id="text-input" class="mb-3" style="display: none;">
-                <label for="text" class="form-label">Enter Text</label>
-                <textarea class="form-control" id="text" name="text" rows="4" placeholder="Write something to analyze your sentiment"></textarea>
+                <label class="form-label">Enter Text</label>
+                <textarea class="form-control" name="text" rows="4"></textarea>
             </div>
-
-            <!-- Audio Input Section -->
             <div id="audio-input" class="mb-3" style="display: none;">
-                <p>Press the button to record your voice.</p>
                 <button type="button" class="btn btn-primary" onclick="startRecording()">Start Recording</button>
-                <input type="hidden" id="audio" name="audio">
             </div>
-
-            <!-- Submit Button -->
-            <div class="text-center mt-4">
-                <button type="submit" class="btn btn-success">Detect Emotion</button>
-            </div>
+            <p id="loading" class="loading">Detecting emotion...</p>
+            <button type="submit" class="btn btn-success">Detect Emotion</button>
         </form>
-        {% else %}
-        <div class="text-center mt-4">
-            <p><strong>Please log in to detect emotions and generate playlists.</strong></p>
+
+        <!-- Display Detected Emotion -->
+        {% if session.get('detected_emotion') %}
+        <div class="emotion-result mt-3">
+            <p><strong>Detected Emotion:</strong> {{ session['detected_emotion'] }}</p>
+            <form id="generate-playlist-form" action="{{ url_for('generate_playlist') }}" method="POST" onsubmit="showPlaylistLoading(event)">
+                <button type="submit" class="btn btn-primary">Generate Playlist</button>
+            </form>
         </div>
+        {% endif %}
+
+        <!-- Display Playlist Loading Message -->
+        <p id="playlist-loading" class="playlist-loading">Generating playlist...</p>
+
+        <!-- Display Playlist Info -->
+        {% if session.get('playlist_url') and session.get('playlist_name') %}
+        <div class="playlist-info mt-3">
+            <p><strong>Playlist Name:</strong> {{ session['playlist_name'] }}</p>
+            <p><strong>Playlist Link:</strong> <a href="{{ session['playlist_url'] }}" class="playlist-link" target="_blank">Listen on Spotify</a></p>
+        </div>
+        {% endif %}
+
+        {% else %}
+        <p><strong>Please log in to detect emotions and generate playlists.</strong></p>
         {% endif %}
     </div>
 
-    <script>
-        // Show/Hide Form Sections Based on Emotion Type
-        document.getElementById("emotion_type").addEventListener("change", function() {
-            const emotionType = this.value;
-            const avatar = document.getElementById("emotion-avatar");
-            const textInput = document.getElementById("text-input");
-            const audioInput = document.getElementById("audio-input");
+    <div class="container dashboard" id="dashboard">
+        <h2>📊 Dashboard</h2>
+        <p>🎵 Dashboard Overview
+</br></br></br>
+🌟 Your Top Artists</br></br>
+🎤 Kanye West – Pop & storytelling magic</br>
+🎸 Pink Floyd – Acoustic vibes & heartfelt lyrics</br>
+🎧 Radiohead – Hip-hop & R&B fusion</br>
+🥁 The Strokes – Rock anthems & powerful beats</br>
+🎹 The Weeknd – R&B & futuristic pop</br>
+</br></br>
+📊 Trending Songs</br></br>
+🎶 Flowers – Miley Cyrus</br>
+🎶 Kill Bill – SZA</br>
+🎶 Calm Down – Rema & Selena Gomez</br>
+🎶 Ode To The Mets– Strokes</br>
+🎶 Creepin’ – The Weeknd</br>
+</br></br>
+🎼 Mood Playlists</br></br>
+😃 Happy Vibes – Upbeat pop & feel-good anthems</br>
+😔 Chill & Relax – Lo-fi beats & soft acoustics</br>
+🤩 Party Mode – EDM & high-energy dance music</br>
+💔 Heartbreak & Sad – Emotional ballads & indie tracks</br>
+🚀 Focus & Study – Instrumental & deep house</p>
+    </div>
 
-            // Change avatar image
-            if (emotionType === "facial") {
-                avatar.src = "https://source.unsplash.com/150x150/?smile,happy";
-                textInput.style.display = "none";
-                audioInput.style.display = "none";
-            } else if (emotionType === "text") {
-                avatar.src = "https://source.unsplash.com/150x150/?thoughts,writing";
-                textInput.style.display = "block";
-                audioInput.style.display = "none";
-            } else if (emotionType === "audio") {
-                avatar.src = "https://source.unsplash.com/150x150/?music,sound";
-                textInput.style.display = "none";
-                audioInput.style.display = "block";
-            } else {
-                avatar.src = "https://source.unsplash.com/150x150/?emotion,fun";
-                textInput.style.display = "none";
-                audioInput.style.display = "none";
-            }
+    <div class="container about-section" id="about">
+        <h2>About</h2>
+        <p>MoodSync is an AI-powered music recommendation app that creates personalized playlists based on your emotions. By analyzing your facial expressions, text sentiment, or voice tone, MoodSync detects your current mood and seamlessly integrates with Spotify to curate a playlist that matches your feelings. Whether you're feeling happy, sad, relaxed, or energetic, the right music is just a click away. Our goal is to enhance your listening experience by combining emotion recognition with intelligent music selection, ensuring that every song resonates with your mood. MoodSync also provides insights into your listening habits, top artists, and trending songs, helping you discover new favorites. Let music adapt to your emotions and make every moment special! 🎵✨</p>
+    </div>
+
+    <script>
+        // Show/hide text and audio inputs based on emotion type
+        document.getElementById("emotion_type").addEventListener("change", function() {
+            document.getElementById("text-input").style.display = this.value === "text" ? "block" : "none";
+            document.getElementById("audio-input").style.display = this.value === "audio" ? "block" : "none";
         });
 
-        function startRecording() {
-            alert("Audio recording feature coming soon!");
+        // Show loading message while detecting emotion
+        function showLoading() {
+            document.getElementById("loading").style.display = "block";
+        }
+
+        // Show loading message while generating playlist
+        function showPlaylistLoading(event) {
+            event.preventDefault(); // Prevent form submission
+            document.getElementById("playlist-loading").style.display = "block"; // Show loading message
+
+            // Submit the form after showing the loading message
+            fetch(event.target.action, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams(new FormData(event.target)),
+            })
+            .then(response => {
+                if (response.redirected) {
+                    window.location.href = response.url; // Redirect to the new page
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById("playlist-loading").style.display = "none"; // Hide loading message on error
+            });
+        }
+
+        // Show popup message
+        function showPopup(message) {
+            alert(message);
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+
+<!--latest-->

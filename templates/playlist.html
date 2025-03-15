@@ -8,6 +8,20 @@
 </head>
 <body>
     <div class="container mt-5">
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="container">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                            {{ message | safe }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
         <h1 class="text-center mb-4">Here is your emotion-based playlist!</h1>
         <h2 class="text-center mb-4">{{ playlist['name'] }}</h2>
         <p class="text-center mb-4">{{ playlist['description'] }}</p>

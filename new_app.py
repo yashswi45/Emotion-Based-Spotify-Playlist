@@ -229,6 +229,99 @@ def callback():
     flash("Spotify connected successfully!")
     return redirect(url_for("index"))
 
+#
+# @app.route("/detect_emotion", methods=["POST"])
+# def detect_emotion():
+#     emotion_type = request.form.get("emotion_type")
+#     if emotion_type == "text":
+#         text = request.form.get("text")
+#         emotion = detect_text_emotion(text)
+#     elif emotion_type == "audio":
+#         emotion = detect_audio_emotion()
+#     else:
+#         emotion = detect_faces_and_emotions()
+#
+#     if not emotion:
+#         flash("No emotion detected. Please try again.")
+#         return redirect(url_for("index"))
+#
+#     # Save detected emotion to history
+#     if session.get("user_id"):
+#         user = User.query.get(session["user_id"])
+#         emotion_history = EmotionHistory(user_id=user.id, emotion=emotion)
+#         db.session.add(emotion_history)
+#         db.session.commit()
+#
+#     flash(f"Detected emotion: {emotion}")
+#     return redirect(url_for("generate_playlist", emotion=emotion))
+#
+#
+# # @app.route("/generate_playlist", methods=["GET"])
+# # def generate_playlist():
+# #     emotion = request.args.get("emotion")
+# #     token = get_token_info()
+# #     if not token:
+# #         return redirect(url_for("spotify_auth"))
+# #
+# #     try:
+# #         sp = spotipy.Spotify(auth=token)
+# #         user = sp.me()
+# #         playlist_name = f"{emotion.capitalize()} Vibes"
+# #         playlist_description = f"Songs to match your {emotion} mood."
+# #         playlist = sp.user_playlist_create(user["id"], playlist_name, description=playlist_description)
+# #
+# #         tracks = get_tracks_for_emotion(emotion)
+# #         if tracks:
+# #             sp.playlist_add_items(playlist["id"], tracks)
+# #         else:
+# #             flash("No tracks found for the emotion.")
+# #             return redirect(url_for("index"))
+# #
+# #         playlist_url = playlist["external_urls"]["spotify"]
+# #         flash("Playlist created successfully!")
+# #         return render_template("playlist.html", playlist_url=playlist_url)
+# #
+# #     except Exception as e:
+# #         print(f"Error creating playlist: {e}")
+# #         flash(f"An error occurred: {e}. Please try again.")
+# #         return redirect(url_for("index"))
+#
+#
+# @app.route("/generate_playlist", methods=["GET"])
+# def generate_playlist():
+#     emotion = request.args.get("emotion")
+#     token = get_token_info()
+#     if not token:
+#         return redirect(url_for("spotify_auth"))
+#
+#     try:
+#         sp = spotipy.Spotify(auth=token)
+#         user = sp.me()
+#         playlist_name = f"{emotion.capitalize()} Vibes"
+#         playlist_description = f"Songs to match your {emotion} mood."
+#         playlist = sp.user_playlist_create(user["id"], playlist_name, description=playlist_description)
+#
+#         tracks = get_tracks_for_emotion(emotion)
+#         if tracks:
+#             sp.playlist_add_items(playlist["id"], tracks)
+#         else:
+#             flash("No tracks found for the emotion.")
+#             return redirect(url_for("index"))
+#
+#         playlist_url = playlist["external_urls"]["spotify"]
+#
+#         # Flash success message
+#         flash(
+#             f"Playlist '{playlist_name}' created successfully! Click <a href='{playlist_url}' target='_blank'>here</a> to listen.",
+#             "success")
+#
+#         return render_template("playlist.html", playlist_url=playlist_url)
+#
+#     except Exception as e:
+#         print(f"Error creating playlist: {e}")
+#         flash(f"An error occurred: {e}. Please try again.", "danger")
+#         return redirect(url_for("index"))
+
 
 @app.route("/detect_emotion", methods=["POST"])
 def detect_emotion():
@@ -245,6 +338,9 @@ def detect_emotion():
         flash("No emotion detected. Please try again.")
         return redirect(url_for("index"))
 
+    # Save detected emotion to session
+    session["detected_emotion"] = emotion
+
     # Save detected emotion to history
     if session.get("user_id"):
         user = User.query.get(session["user_id"])
@@ -253,12 +349,115 @@ def detect_emotion():
         db.session.commit()
 
     flash(f"Detected emotion: {emotion}")
-    return redirect(url_for("generate_playlist", emotion=emotion))
+    return redirect(url_for("index"))
 
 
-@app.route("/generate_playlist", methods=["GET"])
+# @app.route("/generate_playlist", methods=["POST"])
+# def generate_playlist():
+#     emotion = session.get("detected_emotion")
+#     if not emotion:
+#         flash("No emotion detected. Please detect emotion first.")
+#         return redirect(url_for("index"))
+#
+#     token = get_token_info()
+#     if not token:
+#         return redirect(url_for("spotify_auth"))
+#
+#     try:
+#         sp = spotipy.Spotify(auth=token)
+#         user = sp.me()
+#         playlist_name = f"{emotion.capitalize()} Vibes"
+#         playlist_description = f"Songs to match your {emotion} mood."
+#         playlist = sp.user_playlist_create(user["id"], playlist_name, description=playlist_description)
+#
+#         tracks = get_tracks_for_emotion(emotion)
+#         if tracks:
+#             sp.playlist_add_items(playlist["id"], tracks)
+#         else:
+#             flash("No tracks found for the emotion.")
+#             return redirect(url_for("index"))
+#
+#         playlist_url = playlist["external_urls"]["spotify"]
+#
+#         # Flash success message
+#         flash(
+#             f"Playlist '{playlist_name}' created successfully! Click <a href='{playlist_url}' target='_blank'>here</a> to listen.",
+#             "success")
+#
+#         return render_template("playlist.html", playlist_url=playlist_url, playlist_name=playlist_name)
+#
+#     except Exception as e:
+#         print(f"Error creating playlist: {e}")
+#         flash(f"An error occurred: {e}. Please try again.", "danger")
+#         return redirect(url_for("index"))
+
+
+
+
+
+
+
+
+
+
+
+
+# @app.route("/generate_playlist", methods=["POST"])
+# def generate_playlist():
+#     emotion = session.get("detected_emotion")
+#     if not emotion:
+#         flash("No emotion detected. Please detect emotion first.")
+#         return redirect(url_for("index"))
+#
+#     token = get_token_info()
+#     if not token:
+#         return redirect(url_for("spotify_auth"))
+#
+#     try:
+#         sp = spotipy.Spotify(auth=token)
+#         user = sp.me()
+#         playlist_name = f"{emotion.capitalize()} Vibes"
+#         playlist_description = f"Songs to match your {emotion} mood."
+#         playlist = sp.user_playlist_create(user["id"], playlist_name, description=playlist_description)
+#
+#         tracks = get_tracks_for_emotion(emotion)
+#         if tracks:
+#             sp.playlist_add_items(playlist["id"], tracks)
+#         else:
+#             flash("No tracks found for the emotion.")
+#             return redirect(url_for("index"))
+#
+#         playlist_url = playlist["external_urls"]["spotify"]
+#
+#         # Store playlist details in session
+#         session["playlist_name"] = playlist_name
+#         session["playlist_url"] = playlist_url
+#
+#         # Flash success message
+#         flash(f"Playlist '{playlist_name}' created successfully! Click <a href='{playlist_url}' target='_blank'>here</a> to listen.", "success")
+#
+#         return redirect(url_for("index"))
+#
+#     except Exception as e:
+#         print(f"Error creating playlist: {e}")
+#         flash(f"An error occurred: {e}. Please try again.", "danger")
+#         return redirect(url_for("index"))
+
+
+
+
+
+
+
+
+
+@app.route("/generate_playlist", methods=["POST"])
 def generate_playlist():
-    emotion = request.args.get("emotion")
+    emotion = session.get("detected_emotion")
+    if not emotion:
+        flash("No emotion detected. Please detect emotion first.")
+        return redirect(url_for("index"))
+
     token = get_token_info()
     if not token:
         return redirect(url_for("spotify_auth"))
@@ -278,13 +477,24 @@ def generate_playlist():
             return redirect(url_for("index"))
 
         playlist_url = playlist["external_urls"]["spotify"]
-        flash("Playlist created successfully!")
-        return render_template("playlist.html", playlist_url=playlist_url)
+
+        # Store playlist details in session
+        session["playlist_name"] = playlist_name
+        session["playlist_url"] = playlist_url
+
+        # Flash success message
+        flash(f"Playlist '{playlist_name}' created successfully! Click <a href='{playlist_url}' target='_blank'>here</a> to listen.", "success")
+
+        return redirect(url_for("index"))
 
     except Exception as e:
         print(f"Error creating playlist: {e}")
-        flash(f"An error occurred: {e}. Please try again.")
+        flash(f"An error occurred: {e}. Please try again.", "danger")
         return redirect(url_for("index"))
+
+
+
+
 
 
 @app.route("/emotion_history")
@@ -303,3 +513,8 @@ def api_detect_emotion():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
+
+# latest

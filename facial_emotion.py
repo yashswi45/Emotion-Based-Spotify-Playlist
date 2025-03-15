@@ -35,3 +35,8 @@ def detect_faces_and_emotions():
 
 if __name__ == "__main__":
     detect_faces_and_emotions()
+
+
+
+
+# latest

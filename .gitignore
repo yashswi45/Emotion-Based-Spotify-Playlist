@@ -1,1 +1,23 @@
+# Ignore environment files
+.env
+*.env
+config.json
+secrets.json
+apikeys.txt
 
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+.venv/
+venv/
+
+# Ignore log files
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db

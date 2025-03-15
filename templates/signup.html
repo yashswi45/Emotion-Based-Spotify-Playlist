@@ -1,3 +1,138 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Signup - Emotion-Based Playlist Generator</title>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />-->
+<!--    <style>-->
+<!--        body {-->
+<!--            background: linear-gradient(135deg, #2c3e50, #34495e);-->
+<!--            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;-->
+<!--            color: #ecf0f1;-->
+<!--        }-->
+
+<!--        .container {-->
+<!--            background-color: rgba(255, 255, 255, 0.85);-->
+<!--            border-radius: 15px;-->
+<!--            padding: 40px;-->
+<!--            max-width: 500px;-->
+<!--            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);-->
+<!--            margin-top: 50px;-->
+<!--        }-->
+
+<!--        h1 {-->
+<!--            font-family: 'Arial', sans-serif;-->
+<!--            color: #333;-->
+<!--            font-weight: 700;-->
+<!--            text-transform: uppercase;-->
+<!--            letter-spacing: 2px;-->
+<!--        }-->
+
+<!--        .form-label {-->
+<!--            font-weight: 500;-->
+<!--            color: #2c3e50;-->
+<!--        }-->
+
+<!--        .form-control {-->
+<!--            border-radius: 30px;-->
+<!--            padding: 15px;-->
+<!--            font-size: 16px;-->
+<!--            border: 2px solid #34495e;-->
+<!--            transition: all 0.3s;-->
+<!--        }-->
+
+<!--        .form-control:focus {-->
+<!--            border-color: #1abc9c;-->
+<!--            box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);-->
+<!--        }-->
+
+<!--        .btn-primary {-->
+<!--            background-color: #1abc9c;-->
+<!--            border: none;-->
+<!--            border-radius: 30px;-->
+<!--            padding: 15px 30px;-->
+<!--            font-size: 16px;-->
+<!--            font-weight: 600;-->
+<!--            width: 100%;-->
+<!--            transition: all 0.3s;-->
+<!--        }-->
+
+<!--        .btn-primary:hover {-->
+<!--            background-color: #16a085;-->
+<!--            transform: translateY(-2px);-->
+<!--        }-->
+
+<!--        .text-center a {-->
+<!--            text-decoration: none;-->
+<!--            color: #1abc9c;-->
+<!--            font-weight: bold;-->
+<!--            transition: color 0.3s;-->
+<!--        }-->
+
+<!--        .text-center a:hover {-->
+<!--            color: #16a085;-->
+<!--        }-->
+
+<!--        .alert-info {-->
+<!--            background-color: rgba(255, 255, 255, 0.9);-->
+<!--            color: #34495e;-->
+<!--            border-radius: 10px;-->
+<!--            padding: 15px;-->
+<!--            margin-bottom: 20px;-->
+<!--        }-->
+
+<!--        .alert-info p {-->
+<!--            font-weight: 500;-->
+<!--        }-->
+
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="container">-->
+<!--        <h1 class="text-center mb-4">Signup</h1>-->
+
+<!--        &lt;!&ndash; Display flash messages &ndash;&gt;-->
+<!--        {% with messages = get_flashed_messages() %}-->
+<!--            {% if messages %}-->
+<!--                <div class="alert alert-info">-->
+<!--                    {% for message in messages %}-->
+<!--                        <p>{{ message }}</p>-->
+<!--                    {% endfor %}-->
+<!--                </div>-->
+<!--            {% endif %}-->
+<!--        {% endwith %}-->
+
+<!--        &lt;!&ndash; Signup Form &ndash;&gt;-->
+<!--        <form action="{{ url_for('signup') }}" method="POST">-->
+<!--            <div class="mb-3">-->
+<!--                <label for="email" class="form-label">Email</label>-->
+<!--                <input type="email" class="form-control" id="email" name="email" required>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--                <label for="username" class="form-label">Username</label>-->
+<!--                <input type="text" class="form-control" id="username" name="username" required>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--                <label for="password" class="form-label">Password</label>-->
+<!--                <input type="password" class="form-control" id="password" name="password" required>-->
+<!--            </div>-->
+<!--            <div class="text-center">-->
+<!--                <button type="submit" class="btn btn-primary">Signup</button>-->
+<!--            </div>-->
+<!--        </form>-->
+
+<!--        <div class="text-center mt-4">-->
+<!--            <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,25 +140,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup - Emotion-Based Playlist Generator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(135deg, #2c3e50, #34495e);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #ecf0f1;
+            background: linear-gradient(135deg, #110B11, #8CADA7);
+            font-family: 'Dosis', sans-serif;
+            color: #F2F4CB;
         }
 
         .container {
-            background-color: rgba(255, 255, 255, 0.85);
+            background-color: rgba(165, 208, 168, 0.95);
             border-radius: 15px;
             padding: 40px;
             max-width: 500px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
             margin-top: 50px;
         }
 
         h1 {
-            font-family: 'Arial', sans-serif;
-            color: #333;
+            font-family: 'Dosis', sans-serif;
+            color: #110B11;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -31,52 +167,53 @@
 
         .form-label {
             font-weight: 500;
-            color: #2c3e50;
+            color: #110B11;
         }
 
         .form-control {
-            border-radius: 30px;
-            padding: 15px;
+            border-radius: 20px;
+            padding: 12px;
             font-size: 16px;
-            border: 2px solid #34495e;
+            border: 2px solid #8CADA7;
             transition: all 0.3s;
         }
 
         .form-control:focus {
-            border-color: #1abc9c;
-            box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+            border-color: #F2F4CB;
+            box-shadow: 0 0 5px rgba(242, 244, 203, 0.7);
         }
 
         .btn-primary {
-            background-color: #1abc9c;
+            background-color: #110B11;
             border: none;
-            border-radius: 30px;
-            padding: 15px 30px;
+            border-radius: 20px;
+            padding: 12px 30px;
             font-size: 16px;
             font-weight: 600;
             width: 100%;
             transition: all 0.3s;
+            color: #F2F4CB;
         }
 
         .btn-primary:hover {
-            background-color: #16a085;
+            background-color: #8CADA7;
             transform: translateY(-2px);
         }
 
         .text-center a {
             text-decoration: none;
-            color: #1abc9c;
+            color: #110B11;
             font-weight: bold;
             transition: color 0.3s;
         }
 
         .text-center a:hover {
-            color: #16a085;
+            color: #F2F4CB;
         }
 
         .alert-info {
-            background-color: rgba(255, 255, 255, 0.9);
-            color: #34495e;
+            background-color: rgba(242, 244, 203, 0.9);
+            color: #110B11;
             border-radius: 10px;
             padding: 15px;
             margin-bottom: 20px;
@@ -92,7 +229,6 @@
     <div class="container">
         <h1 class="text-center mb-4">Signup</h1>
 
-        <!-- Display flash messages -->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 <div class="alert alert-info">
@@ -103,7 +239,6 @@
             {% endif %}
         {% endwith %}
 
-        <!-- Signup Form -->
         <form action="{{ url_for('signup') }}" method="POST">
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>

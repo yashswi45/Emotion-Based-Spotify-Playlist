@@ -1,4 +1,7 @@
-from waitress import serve
-from new_app import app  # assuming 'app' is your Flask app
+from dotenv import load_dotenv
+import os
 
-serve(app, host='0.0.0.0', port=5000)
+load_dotenv()
+
+# Check if variables are loaded correctly
+print(os.getenv("SPOTIPY_REDIRECT_URI"))  # Should print 'http://127.0.0.1:8501/callback'

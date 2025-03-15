@@ -1,3 +1,195 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Login - Emotion-Based Playlist Generator</title>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />-->
+<!--    <style>-->
+<!--        body {-->
+<!--            background: url('https://source.unsplash.com/1600x900/?nature,water');-->
+<!--            background-image: url('../static/images/listen.jpg');-->
+
+<!--            background-size: cover;-->
+<!--            font-family: 'Comic Sans MS', 'Arial', sans-serif;-->
+<!--            color: white;-->
+<!--            text-align: center;-->
+<!--            height: 100vh;-->
+<!--            margin: 0;-->
+<!--        }-->
+
+<!--        .container {-->
+<!--            background: rgba(255, 255, 255, 0.1); /* Slight transparency */-->
+<!--            backdrop-filter: blur(0px); /* Frosted-glass effect */-->
+<!--            padding: 40px;-->
+<!--            border-radius: 25px;-->
+<!--            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);-->
+<!--            width: 100%;-->
+<!--            max-width: 420px;-->
+<!--&lt;!&ndash;            transition: all 0.0s ease;&ndash;&gt;-->
+<!--        }-->
+
+<!--        h1 {-->
+<!--            font-family: 'Baskerville', serif;-->
+<!--            color: #FFD700;-->
+<!--            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);-->
+<!--            font-size: 2.8rem;-->
+<!--            margin-bottom: 25px;-->
+<!--            animation: bounce 1s infinite alternate;-->
+<!--        }-->
+
+<!--        @keyframes bounce {-->
+<!--            0% { transform: translateY(0); }-->
+<!--            100% { transform: translateY(-20px); }-->
+<!--        }-->
+
+<!--        .alert {-->
+<!--            background-color: #FF6347;-->
+<!--            color: white;-->
+<!--            border-radius: 15px;-->
+<!--            margin-bottom: 20px;-->
+<!--            font-weight: bold;-->
+<!--        }-->
+
+<!--        .form-label {-->
+<!--            color: #FFD700;-->
+<!--            font-weight: bold;-->
+<!--            font-size: 1.2rem;-->
+<!--            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);-->
+<!--        }-->
+
+<!--        .form-control {-->
+<!--            border-radius: 20px;-->
+<!--            padding: 12px;-->
+<!--            border: 2px solid #FFD700;-->
+<!--            font-size: 1rem;-->
+<!--            background-color: #FFF5E1;-->
+<!--            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);-->
+<!--            transition: all 0.3s ease;-->
+<!--        }-->
+
+<!--        .form-control:focus {-->
+<!--            border-color: #FF6347;-->
+<!--            box-shadow: 0 0 15px rgba(255, 99, 71, 0.5);-->
+<!--        }-->
+
+<!--        .btn-primary {-->
+<!--            background-color: #FF6347;-->
+<!--            border: none;-->
+<!--            padding: 10px 25px;-->
+<!--            font-size: 1.3rem;-->
+<!--            border-radius: 25px;-->
+<!--            transition: all 0.4s ease;-->
+<!--        }-->
+
+<!--        .btn-primary:hover {-->
+<!--            background-color: #FF4500;-->
+<!--            transform: scale(1.1);-->
+<!--            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.5);-->
+<!--        }-->
+
+<!--        .btn-primary:focus {-->
+<!--            outline: none;-->
+<!--            box-shadow: 0 0 10px rgba(255, 99, 71, 0.8);-->
+<!--        }-->
+
+<!--        .text-center {-->
+<!--            margin-top: 30px;-->
+<!--        }-->
+
+<!--        .signup-link {-->
+<!--            font-size: 1.1rem;-->
+<!--            color: #FFD700;-->
+<!--            text-decoration: underline;-->
+<!--            transition: all 0.3s ease;-->
+<!--        }-->
+
+<!--        .signup-link:hover {-->
+<!--            color: #FF6347;-->
+<!--            text-decoration: none;-->
+<!--        }-->
+
+<!--        .text-center.mt-4 {-->
+<!--            color: white;-->
+<!--            font-weight: 800; /* Extra bold */-->
+<!--            font-size: 1.5rem; /* Big font size */-->
+<!--            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds subtle shadow for better visibility */-->
+<!--            letter-spacing: 1px; /* Improves clarity */-->
+<!--            margin-top: 30px;-->
+<!--        }-->
+
+
+<!--        .fun-img {-->
+<!--            width: 110px;-->
+<!--            height: 110px;-->
+<!--            object-fit: cover;-->
+<!--            border-radius: 50%;-->
+<!--            border: 2px solid #FF6347;-->
+<!--            margin-bottom: 20px;-->
+<!--            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);-->
+<!--            animation: rotate 0s infinite linear;-->
+<!--        }-->
+
+<!--        @keyframes rotate {-->
+<!--            0% { transform: rotate(0deg); }-->
+<!--            100% { transform: rotate(360deg); }-->
+<!--        }-->
+
+<!--        .floating-label {-->
+<!--            position: absolute;-->
+<!--            top: -10px;-->
+<!--            left: 15px;-->
+<!--            background-color: #FFF5E1;-->
+<!--            padding: 0 5px;-->
+<!--            font-size: 0.9rem;-->
+<!--            font-weight: bold;-->
+<!--            color: #FF6347;-->
+<!--            transition: all 0.2s ease;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="container">-->
+<!--        <img src="/static/images/download (1).jpeg" class="fun-img" alt="fun emoji">-->
+<!--        <h1>Login</h1>-->
+<!--&lt;!&ndash;/static/images/cs.jpg&ndash;&gt;-->
+<!--        &lt;!&ndash; Display flash messages &ndash;&gt;-->
+<!--        {% with messages = get_flashed_messages() %}-->
+<!--            {% if messages %}-->
+<!--                <div class="alert alert-info">-->
+<!--                    {% for message in messages %}-->
+<!--                        <p>{{ message }}</p>-->
+<!--                    {% endfor %}-->
+<!--                </div>-->
+<!--            {% endif %}-->
+<!--        {% endwith %}-->
+
+<!--        &lt;!&ndash; Login Form &ndash;&gt;-->
+<!--        <form action="{{ url_for('login') }}" method="POST">-->
+<!--            <div class="position-relative mb-3">-->
+<!--                <input type="email" class="form-control" id="email" name="email" required>-->
+<!--                <label for="email" class="floating-label">Email</label>-->
+<!--            </div>-->
+<!--            <div class="position-relative mb-3">-->
+<!--                <input type="password" class="form-control" id="password" name="password" required>-->
+<!--                <label for="password" class="floating-label">Password</label>-->
+<!--            </div>-->
+<!--            <div class="text-center">-->
+<!--                <button type="submit" class="btn btn-primary">Login</button>-->
+<!--            </div>-->
+<!--        </form>-->
+
+<!--        <div class="text-center mt-4">-->
+<!--            <p>Don't have an account? <a href="{{ url_for('signup') }}" class="signup-link">Sign up</a></p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,153 +199,83 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
         body {
-            background: url('https://source.unsplash.com/1600x900/?nature,water');
-            background-image: url('../static/images/listen.jpg');
-
-            background-size: cover;
-            font-family: 'Comic Sans MS', 'Arial', sans-serif;
-            color: white;
-            text-align: center;
+            background-color: #110B11;
+            font-family: 'Dosis', sans-serif;
+            color: #A5D0A8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
             margin: 0;
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.1); /* Slight transparency */
-            backdrop-filter: blur(0px); /* Frosted-glass effect */
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
             padding: 40px;
-            border-radius: 25px;
+            border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
             width: 100%;
-            max-width: 420px;
-<!--            transition: all 0.0s ease;-->
         }
 
         h1 {
-            font-family: 'Baskerville', serif;
-            color: #FFD700;
-            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
-            font-size: 2.8rem;
-            margin-bottom: 25px;
-            animation: bounce 1s infinite alternate;
-        }
-
-        @keyframes bounce {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-20px); }
-        }
-
-        .alert {
-            background-color: #FF6347;
-            color: white;
-            border-radius: 15px;
+            color: #F2F4CB;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            font-weight: bold;
         }
 
         .form-label {
-            color: #FFD700;
             font-weight: bold;
-            font-size: 1.2rem;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+            color: #F2F4CB;
         }
 
         .form-control {
-            border-radius: 20px;
-            padding: 12px;
-            border: 2px solid #FFD700;
-            font-size: 1rem;
-            background-color: #FFF5E1;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
+            border-radius: 10px;
+            padding: 10px;
+            border: 2px solid #A5D0A8;
+            background-color: transparent;
+            color: #F2F4CB;
         }
 
         .form-control:focus {
-            border-color: #FF6347;
-            box-shadow: 0 0 15px rgba(255, 99, 71, 0.5);
+            border-color: #8CADA7;
+            box-shadow: 0 0 10px rgba(165, 208, 168, 0.5);
         }
 
         .btn-primary {
-            background-color: #FF6347;
+            background-color: #8CADA7;
             border: none;
-            padding: 10px 25px;
-            font-size: 1.3rem;
+            padding: 10px 20px;
+            font-size: 1.2rem;
             border-radius: 25px;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
+            color: #110B11;
+            font-weight: bold;
         }
 
         .btn-primary:hover {
-            background-color: #FF4500;
-            transform: scale(1.1);
-            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.5);
+            background-color: #A5D0A8;
+            transform: scale(1.05);
         }
 
-        .btn-primary:focus {
-            outline: none;
-            box-shadow: 0 0 10px rgba(255, 99, 71, 0.8);
-        }
-
-        .text-center {
-            margin-top: 30px;
-        }
-
-        .signup-link {
-            font-size: 1.1rem;
-            color: #FFD700;
-            text-decoration: underline;
-            transition: all 0.3s ease;
-        }
-
-        .signup-link:hover {
-            color: #FF6347;
+        .text-center a {
+            color: #F2F4CB;
             text-decoration: none;
-        }
-
-        .text-center.mt-4 {
-            color: white;
-            font-weight: 800; /* Extra bold */
-            font-size: 1.5rem; /* Big font size */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds subtle shadow for better visibility */
-            letter-spacing: 1px; /* Improves clarity */
-            margin-top: 30px;
-        }
-
-
-        .fun-img {
-            width: 110px;
-            height: 110px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 2px solid #FF6347;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            animation: rotate 0s infinite linear;
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .floating-label {
-            position: absolute;
-            top: -10px;
-            left: 15px;
-            background-color: #FFF5E1;
-            padding: 0 5px;
-            font-size: 0.9rem;
             font-weight: bold;
-            color: #FF6347;
-            transition: all 0.2s ease;
+        }
+
+        .text-center a:hover {
+            color: #A5D0A8;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="/static/images/download (1).jpeg" class="fun-img" alt="fun emoji">
         <h1>Login</h1>
-<!--/static/images/cs.jpg-->
-        <!-- Display flash messages -->
+
+        <!-- Flash messages -->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 <div class="alert alert-info">
@@ -166,24 +288,23 @@
 
         <!-- Login Form -->
         <form action="{{ url_for('login') }}" method="POST">
-            <div class="position-relative mb-3">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email" required>
-                <label for="email" class="floating-label">Email</label>
             </div>
-            <div class="position-relative mb-3">
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" name="password" required>
-                <label for="password" class="floating-label">Password</label>
             </div>
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary">Login</button>
-            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
         </form>
 
-        <div class="text-center mt-4">
-            <p>Don't have an account? <a href="{{ url_for('signup') }}" class="signup-link">Sign up</a></p>
+        <div class="text-center mt-3">
+            <p>Don't have an account? <a href="{{ url_for('signup') }}">Sign up</a></p>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+<!--latest-->
